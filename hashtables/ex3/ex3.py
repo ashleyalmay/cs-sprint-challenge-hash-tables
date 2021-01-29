@@ -3,7 +3,28 @@ def intersection(arrays):
     YOUR CODE HERE
     """
     # Your code here
-
+    cache = {}
+    # set this to be empty 
+    length = len(arrays)
+    # for later check
+    result = []
+    #the answer will go in here 
+    counter = 1
+    # set the counter to keep track
+    for the_lists in arrays:
+    # go though the all lists
+        for item in the_lists:
+        #looking at the elements    
+            if item not in cache:
+                cache[item] = counter
+            # dont add to counter 
+            else:
+                cache[item] += 1
+            #add 
+    for nums in cache:
+        if cache[nums] == length:
+            result.append(nums)
+    #this sets it in the result  
     return result
 
 
